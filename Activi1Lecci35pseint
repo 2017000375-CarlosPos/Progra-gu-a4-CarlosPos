@@ -1,0 +1,36 @@
+Algoritmo ConvertidorMoneda
+	Definir cantidadLocal Como Real
+	Definir respuesta Como Cadena
+	Definir usd, eur, mxn, gbp, jpy Como Real
+	
+	usd <- 0.13    
+	eur <- 0.12    
+	mxn <- 2.25    
+	gbp <- 0.10    
+	jpy <- 19.50   
+	
+	Repetir
+		Escribir "=== CONVERTIDOR DE MONEDA ==="
+		Escribir "Ingrese la cantidad en moneda local:"
+		Leer cantidadLocal
+		
+		Escribir "----------------------------------"
+		Escribir "Equivalencias:"
+		Escribir "1. EE.UU. (USD): ", (cantidadLocal * usd)
+		Escribir "2. Unión Europea (EUR): ", (cantidadLocal * eur)
+		Escribir "3. México (MXN): ", (cantidadLocal * mxn)
+		Escribir "4. Reino Unido (GBP): ", (cantidadLocal * gbp)
+		Escribir "5. Japón (JPY): ", (cantidadLocal * jpy)
+		Escribir "----------------------------------"
+		
+		Escribir "¿Desea convertir otra cantidad? (s/n):"
+		Leer respuesta
+	Hasta Que Mayusculas(respuesta) = "N"
+	
+	Escribir "¡Programa finalizado!"
+FinAlgoritmo
+		Leer respuesta
+	Hasta Que Mayusculas(respuesta) = "N"
+	
+	Escribir "¡Programa finalizado!"
+FinAlgoritmo
