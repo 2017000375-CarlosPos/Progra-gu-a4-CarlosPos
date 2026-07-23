@@ -1,0 +1,19 @@
+Algoritmo problema5
+	Definir frase, fraseInvertida Como Cadena
+	Definir i Como Entero
+	
+	Escribir "=== INVERTIR FRASE ==="
+	Escribir "Ingrese una frase o texto:"
+	Leer frase
+	
+	fraseInvertida = ""
+	
+	Para i = Longitud(frase) Hasta 1 Con Paso -1 Hacer
+		fraseInvertida = Concatenar(fraseInvertida, Subcadena(frase, i, i))
+	FinPara
+	
+	Escribir "----------------------------------"
+	Escribir "Frase original: ", frase
+	Escribir "Frase invertida: ", fraseInvertida
+	Escribir "----------------------------------"
+FinAlgoritmo
