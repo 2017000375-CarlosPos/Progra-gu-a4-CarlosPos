@@ -1,0 +1,29 @@
+Algoritmo problema4
+	Dimension nombres[10]
+	Dimension telefonos[10]
+	Definir i, posicion Como Entero
+	
+	Escribir "=== REGISTRO DE CONTACTOS ==="
+	Para i <- 1 Hasta 10 Con Paso 1 Hacer
+		Escribir "Contacto #", i
+		Escribir "Ingrese el nombre:"
+		Leer nombres[i]
+		Escribir "Ingrese el teléfono:"
+		Leer telefonos[i]
+		Escribir "---------------------------"
+	FinPara
+	
+	Escribir "=== BÚSQUEDA DE CONTACTO ==="
+	Escribir "Ingrese el número de posición que desea consultar (1 a 10):"
+	Leer posicion
+	
+	Si posicion >= 1 Y posicion <= 10 Entonces
+		Escribir "---------------------------"
+		Escribir "Datos en la posición ", posicion, ":"
+		Escribir "Nombre: ", nombres[posicion]
+		Escribir "Teléfono: ", telefonos[posicion]
+		Escribir "---------------------------"
+	Sino
+		Escribir "Posición no válida. Debe ser un número entre 1 y 10."
+	FinSi
+FinAlgoritmo
