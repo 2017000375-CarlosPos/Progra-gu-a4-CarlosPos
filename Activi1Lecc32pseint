@@ -1,0 +1,35 @@
+Algoritmo Problema1
+    Definir mt, respuesta Como Real
+    Definir opcion Como Caracter
+	
+    Escribir "Ingrese la cantidad en metros:"
+    Leer mt
+	
+    Escribir "===================elija la opcion de conversion===================="
+    Escribir "a. milimetros"
+    Escribir "b. Centimetros"
+    Escribir "c. Decimetros"
+    Escribir "d. Hectómetros"
+    Escribir "e. Kilometros"
+    Leer opcion
+	
+    Segun opcion Hacer
+        "a", "A":
+            resuesta = mt * 1000
+            Escribir mt, " metros equivale a ", respuesta, " milímetros."
+        "b", "B":
+            respuesta = mt * 100
+            Escribir mt, " metros equivale a ", respuesta, " centímetros."
+        "c", "C":
+            respuesta = mt * 10
+            Escribir mt, " metros equivale a ", respuesta, " decímetros."
+        "d", "D":
+            respuesta = mt / 100
+            Escribir mt, " metros equivale a ", respuesta, " hectómetros."
+        "e", "E":
+            respuesta = mt / 1000
+            Escribir mt, " metros equivale a ", respuesta, " kilómetros."
+        De Otro Modo:
+            Escribir "Opción no válida."
+    FinSegun
+FinAlgoritmo
