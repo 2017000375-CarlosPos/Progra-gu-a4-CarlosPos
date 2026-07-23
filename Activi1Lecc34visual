@@ -1,0 +1,36 @@
+Console.WriteLine("=== CONVERSOR DE BASES ===");
+        Console.WriteLine("1. Convertir Decimal a Binario");
+        Console.WriteLine("2. Convertir Binario a Decimal");
+        Console.Write("Seleccione una opción (1 o 2): ");
+        int opcion = Convert.ToInt32(Console.ReadLine());
+
+        switch (opcion)
+        {
+            case 1:
+                Console.Write("Ingrese un número decimal: ");
+                int numDecimal = Convert.ToInt32(Console.ReadLine());
+
+                // Método integrado de C# para decimal a binario
+                string binario = Convert.ToString(numDecimal, 2);
+                
+                Console.WriteLine("----------------------------------");
+                Console.WriteLine($"El número en binario es: {binario}");
+                Console.WriteLine("----------------------------------");
+                break;
+
+            case 2:
+                Console.Write("Ingrese un número binario: ");
+                string numBinario = Console.ReadLine();
+
+                // Método integrado de C# para binario a decimal
+                int decimalResultado = Convert.ToInt32(numBinario, 2);
+
+                Console.WriteLine("----------------------------------");
+                Console.WriteLine($"El número en decimal es: {decimalResultado}");
+                Console.WriteLine("----------------------------------");
+                break;
+
+            default:
+                Console.WriteLine("Opción no válida.");
+                break;
+        }
