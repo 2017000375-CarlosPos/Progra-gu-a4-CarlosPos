@@ -1,0 +1,82 @@
+ Console.WriteLine("=== DETERMINADOR DE HORÓSCOPO ===");
+
+ Console.Write("Ingrese el número de su mes de nacimiento (1-12): ");
+ int mes = Convert.ToInt32(Console.ReadLine());
+
+ Console.Write("Ingrese el día de nacimiento (1-31): ");
+ int dia = Convert.ToInt32(Console.ReadLine());
+
+ string signo = "";
+ string horoscopo = "";
+
+ switch (mes)
+ {
+     case 1:
+         if (dia <= 19) { signo = "Capricornio"; horoscopo = "Un proyecto personal tomará fuerza hoy."; }
+         else { signo = "Acuario"; horoscopo = "Tu creatividad te abrirá nuevas puertas."; }
+         break;
+
+     case 2:
+         if (dia <= 18) { signo = "Acuario"; horoscopo = "Tu creatividad te abrirá nuevas puertas."; }
+         else { signo = "Piscis"; horoscopo = "Confía en tu intuición, no te equivocará."; }
+         break;
+
+     case 3:
+         if (dia <= 20) { signo = "Piscis"; horoscopo = "Confía en tu intuición, no te equivocará."; }
+         else { signo = "Aries"; horoscopo = "Tu energía contagiará a todos a tu alrededor."; }
+         break;
+
+     case 4:
+         if (dia <= 19) { signo = "Aries"; horoscopo = "Tu energía contagiará a todos a tu alrededor."; }
+         else { signo = "Tauro"; horoscopo = "La paciencia será tu mejor aliada este mes."; }
+         break;
+
+     case 5:
+         if (dia <= 20) { signo = "Tauro"; horoscopo = "La paciencia será tu mejor aliada este mes."; }
+         else { signo = "Géminis"; horoscopo = "Aprenderás algo nuevo y muy valioso."; }
+         break;
+
+     case 6:
+         if (dia <= 20) { signo = "Géminis"; horoscopo = "Aprenderás algo nuevo y muy valioso."; }
+         else { signo = "Cáncer"; horoscopo = "Dedica tiempo a tus seres queridos."; }
+         break;
+
+     case 7:
+         if (dia <= 22) { signo = "Cáncer"; horoscopo = "Dedica tiempo a tus seres queridos."; }
+         else { signo = "Leo"; horoscopo = "Brillarás en una actividad importante."; }
+         break;
+
+     case 8:
+         if (dia <= 22) { signo = "Leo"; horoscopo = "Brillarás en una actividad importante."; }
+         else { signo = "Virgo"; horoscopo = "Tu orden y disciplina darán frutos excelentes."; }
+         break;
+
+     case 9:
+         if (dia <= 22) { signo = "Virgo"; horoscopo = "Tu orden y disciplina darán frutos excelentes."; }
+         else { signo = "Libra"; horoscopo = "Encontrarás el equilibrio en tus decisiones."; }
+         break;
+
+     case 10:
+         if (dia <= 22) { signo = "Libra"; horoscopo = "Encontrarás el equilibrio en tus decisiones."; }
+         else { signo = "Escorpio"; horoscopo = "Descubrirás algo importante que te motivará."; }
+         break;
+
+     case 11:
+         if (dia <= 21) { signo = "Escorpio"; horoscopo = "Descubrirás algo importante que te motivará."; }
+         else { signo = "Sagitario"; horoscopo = "Una gran aventura o viaje se aproxima."; }
+         break;
+
+     case 12:
+         if (dia <= 21) { signo = "Sagitario"; horoscopo = "Una gran aventura o viaje se aproxima."; }
+         else { signo = "Capricornio"; horoscopo = "Un proyecto personal tomará fuerza hoy."; }
+         break;
+
+     default:
+         Console.WriteLine("Mes no válido.");
+         return;
+ }
+
+ Console.WriteLine("\n----------------------------------");
+ Console.WriteLine($"Tu signo zodiacal es: {signo}");
+ Console.WriteLine($"Horóscopo: {horoscopo}");
+ Console.WriteLine("----------------------------------");
