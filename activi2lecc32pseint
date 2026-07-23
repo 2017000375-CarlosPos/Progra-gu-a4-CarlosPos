@@ -1,0 +1,121 @@
+Algoritmo problema2
+	Definir dia, mes Como Entero
+	Definir signo, horoscopo Como Cadena
+	
+	Escribir "=== DETERMINADOR DE HORÓSCOPO ==="
+	Escribir "Ingrese su mes de nacimiento (1-12): "
+	Leer mes
+	Escribir "Ingrese su día de nacimiento (1-31): "
+	Leer dia
+	
+	signo = ""
+	horoscopo = ""
+	
+	Segun mes Hacer
+		1:
+			Si dia <= 19 Entonces
+				signo ="Capricornio"
+				horoscopo = "Un proyecto personal tomará fuerza hoy."
+			Sino
+				signo = "Acuario"
+				horoscopo = "Tu creatividad te abrirá nuevas puertas."
+			FinSi
+		2:
+			Si dia <= 18 Entonces
+				signo = "Acuario"
+				horoscopo = "Tu creatividad te abrirá nuevas puertas."
+			Sino
+				signo = "Piscis"
+				horoscopo = "Confía en tu intuición, no te equivocará."
+			FinSi
+		3:
+			Si dia <= 20 Entonces
+				signo = "Piscis"
+				horoscopo = "Confía en tu intuición, no te equivocará."
+			Sino
+				signo ="Aries"
+				horoscopo = "Tu energía contagiará a todos a tu alrededor."
+			FinSi
+		4:
+			Si dia <= 19 Entonces
+				signo = "Aries"
+				horoscopo = "Tu energía contagiará a todos a tu alrededor."
+			Sino
+				signo <- "Tauro"
+				horoscopo <- "La paciencia será tu mejor aliada este mes."
+			FinSi
+		5:
+			Si dia <= 20 Entonces
+				signo = "Tauro"
+				horoscopo = "La paciencia será tu mejor aliada este mes."
+			Sino
+				signo = "Géminis"
+				horoscopo = "Aprenderás algo nuevo y muy valioso."
+			FinSi
+		6:
+			Si dia <= 20 Entonces
+				signo = "Géminis"
+				horoscopo = "Aprenderás algo nuevo y muy valioso."
+			Sino
+				signo = "Cáncer"
+				horoscopo = "Dedica tiempo a tus seres queridos."
+			FinSi
+		7:
+			Si dia <= 22 Entonces
+				signo = "Cáncer"
+				horoscopo = "Dedica tiempo a tus seres queridos."
+			Sino
+				signo = "Leo"
+				horoscopo = "Brillarás en una actividad importante."
+			FinSi
+		8:
+			Si dia <= 22 Entonces
+				signo ="Leo"
+				horoscopo = "Brillarás en una actividad importante."
+			Sino
+				signo ="Virgo"
+				horoscopo = "Tu orden y disciplina darán frutos excelentes."
+			FinSi
+		9:
+			Si dia <= 22 Entonces
+				signo <- "Virgo"
+				horoscopo <- "Tu orden y disciplina darán frutos excelentes."
+			Sino
+				signo <- "Libra"
+				horoscopo <- "Encontrarás el equilibrio en tus decisiones."
+			FinSi
+		10:
+			Si dia <= 22 Entonces
+				signo = "Libra"
+				horoscopo = "Encontrarás el equilibrio en tus decisiones."
+			Sino
+				signo = "Escorpio"
+				horoscopo = "Descubrirás algo importante que te motivará."
+			FinSi
+		11:
+			Si dia <= 21 Entonces
+				signo = "Escorpio"
+				horoscopo ="Descubrirás algo importante que te motivará."
+			Sino
+				signo <- "Sagitario"
+				horoscopo <- "Una gran aventura o viaje se aproxima."
+			FinSi
+		12:
+			Si dia <= 21 Entonces
+				signo ="Sagitario"
+				horoscopo = "Una gran aventura o viaje se aproxima."
+			Sino
+				signo = "Capricornio"
+				horoscopo = "Un proyecto personal tomará fuerza hoy."
+			FinSi
+		De Otro Modo:
+			Escribir "Mes no valido."
+	FinSegun
+	
+	Si signo <> "" Entonces
+		Escribir "----------------------------------"
+		Escribir "Tu signo zodiacal es: ", signo
+		Escribir "Horóscopo: ", horoscopo
+		Escribir "----------------------------------"
+	FinSi
+FinAlgoritmo
