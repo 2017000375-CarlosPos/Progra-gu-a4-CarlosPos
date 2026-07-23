@@ -1,0 +1,48 @@
+Algoritmo problema6
+	Definir opcion, numDecimal, residuo, base, i Como Entero
+	Definir numBinario, binarioTexto Como Cadena
+	Definir resultadoDecimal Como Entero
+	
+	Escribir "=== CONVERSOR DE BASES ==="
+	Escribir "1. Convertir Decimal a Binario"
+	Escribir "2. Convertir Binario a Decimal"
+	Escribir "Seleccione una opción (1 o 2):"
+	Leer opcion
+	
+	Segun opcion Hacer
+		1:
+			Escribir "Ingrese un número decimal:"
+			Leer numDecimal
+			binarioTexto <- ""
+			
+			Si numDecimal = 0 Entonces
+				binarioTexto <- "0"
+			Sino
+				Mientras numDecimal > 0 Hacer
+					residuo <- numDecimal % 2
+					binarioTexto <- Concatenar(ConvertirATexto(residuo), binarioTexto)
+					numDecimal <- TRUNC(numDecimal / 2)
+				FinMientras
+			FinSi
+			
+			Escribir "El número en binario es: ", binarioTexto
+			
+		2:
+			Escribir "Ingrese un número binario:"
+			Leer numBinario
+			resultadoDecimal <- 0
+			base <- 1
+			
+			Para i <- Longitud(numBinario) Hasta 1 Con Paso -1 Hacer
+				Si Subcadena(numBinario, i, i) = "1" Entonces
+					resultadoDecimal <- resultadoDecimal + base
+				FinSi
+				base <- base * 2
+			FinPara
+			
+			Escribir "El número en decimal es: ", resultadoDecimal
+			
+		De Otro Modo:
+			Escribir "Opción no válida."
+	FinSegun
+FinAlgoritmo
