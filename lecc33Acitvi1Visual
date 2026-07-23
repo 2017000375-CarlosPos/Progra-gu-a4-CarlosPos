@@ -1,0 +1,35 @@
+string[] nombres = new string[10];
+string[] telefonos = new string[10];
+
+Console.WriteLine("=== REGISTRO DE CONTACTOS ===");
+
+for (int i = 0; i < 10; i++)
+{
+    Console.WriteLine($"Contacto #{i + 1}");
+
+    Console.Write("Ingrese el nombre: ");
+    nombres[i] = Console.ReadLine();
+
+    Console.Write("Ingrese el teléfono: ");
+    telefonos[i] = Console.ReadLine();
+
+    Console.WriteLine("---------------------------");
+}
+
+Console.WriteLine("\n=== BÚSQUEDA DE CONTACTO ===");
+Console.Write("Ingrese el número de posición que desea consultar (1 a 10): ");
+int posicion = Convert.ToInt32(Console.ReadLine());
+
+if (posicion >= 1 && posicion <= 10)
+{
+    int indice = posicion - 1; 
+    Console.WriteLine("---------------------------");
+    Console.WriteLine($"Datos en la posición {posicion}:");
+    Console.WriteLine($"Nombre: {nombres[indice]}");
+    Console.WriteLine($"Teléfono: {telefonos[indice]}");
+    Console.WriteLine("---------------------------");
+}
+else
+{
+    Console.WriteLine("Posición no válida. Debe ser entre 1 y 10.");
+}
