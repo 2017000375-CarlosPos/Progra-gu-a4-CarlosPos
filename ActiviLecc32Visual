@@ -1,0 +1,48 @@
+ Console.WriteLine("Pon cantidad metros:");
+
+
+ double mt = Convert.ToDouble(Console.ReadLine());
+ Console.WriteLine("=================================");
+ Console.WriteLine("elija la opcion de conversion:");
+ Console.WriteLine("=================================");
+ Console.WriteLine("a. Milimetros");
+ Console.WriteLine("b. Centimetros");
+ Console.WriteLine("c. Decimetros");
+ Console.WriteLine("d. Hectometros");
+ Console.WriteLine("e. Kilometros");
+
+ string opcion = Console.ReadLine().ToLower();
+
+ double respuesta = 0;
+ string Uni = "";
+
+
+ switch (opcion)
+ {
+     case "a":
+         respuesta = mt * 1000;
+         Uni = "milímetros";
+         break;
+     case "b":
+         respuesta = mt * 100;
+         Uni = "centímetros";
+         break;
+     case "c":
+         respuesta = mt * 10;
+         Uni = "decímetros";
+         break;
+     case "d":
+         respuesta = mt / 100;
+         Uni = "hectómetros";
+         break;
+     case "e":
+         respuesta = mt / 1000;
+         Uni = "kilómetros";
+         break;
+     default:
+         Console.WriteLine("Opción no válida.");
+         return;
+ }
+
+
+ Console.WriteLine($"{mt} metros equivale a {respuesta} {Uni}.");
